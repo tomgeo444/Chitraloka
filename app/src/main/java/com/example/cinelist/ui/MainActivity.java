@@ -17,8 +17,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.cinelist.R;
 import com.example.cinelist.data.Movie;
 import com.example.cinelist.viewmodel.MovieViewModel;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.chip.ChipGroup;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 public class MainActivity extends AppCompatActivity implements MovieAdapter.OnMovieClickListener {
 
@@ -32,7 +33,9 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.OnMo
     private ChipGroup chipGroupFilter;
     private RecyclerView rvMovies;
     private LinearLayout layoutEmptyState;
-    private FloatingActionButton fabAddMovie;
+    private ExtendedFloatingActionButton fabAddMovie;
+    private MaterialButton btnAddMovieEmpty;
+    private MaterialButton btnTopAddMovie;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.OnMo
         setupViewModel();
         setupSearch();
         setupFilterChips();
-        setupFab();
+        setupAddActions();
     }
 
     private void initViews() {
@@ -54,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.OnMo
         rvMovies = findViewById(R.id.rvMovies);
         layoutEmptyState = findViewById(R.id.layoutEmptyState);
         fabAddMovie = findViewById(R.id.fabAddMovie);
+        btnAddMovieEmpty = findViewById(R.id.btnAddMovieEmpty);
+        btnTopAddMovie = findViewById(R.id.btnTopAddMovie);
     }
 
     private void setupRecyclerView() {
@@ -115,11 +120,15 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.OnMo
         });
     }
 
-    private void setupFab() {
-        fabAddMovie.setOnClickListener(v -> {
+    private void setupAddActions() {
+        View.OnClickListener openAddMovieListener = v -> {
             Intent intent = new Intent(MainActivity.this, AddMovieActivity.class);
             startActivity(intent);
-        });
+        };
+
+        fabAddMovie.setOnClickListener(openAddMovieListener);
+        btnTopAddMovie.setOnClickListener(openAddMovieListener);
+        btnAddMovieEmpty.setOnClickListener(openAddMovieListener);
     }
 
     @Override
