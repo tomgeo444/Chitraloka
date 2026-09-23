@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CineList</string>
+    <string name="app_subtitle">Movie Watchlist Manager</string>
+
+    <!-- Filters -->
+    <string name="filter_all">All</string>
+    <string name="filter_want_to_watch">Want to Watch</string>
+    <string name="filter_watched">Watched</string>
+
+    <!-- Search & Placeholders -->
+    <string name="search_hint">Search movies by title...</string>
+    <string name="empty_movies_title">No Movies Found</string>
+    <string name="empty_movies_subtitle">Tap the + button below to add your first movie!</string>
+
+    <!-- Movie Card / Details -->
+    <string name="status_watched">✓ Watched</string>
+    <string name="status_want_to_watch">⏳ Want to Watch</string>
+    <string name="btn_mark_watched">Mark as Watched</string>
+    <string name="btn_mark_unwatched">Mark as Want to Watch</string>
+    <string name="btn_edit">Edit Movie</string>
+    <string name="btn_delete">Delete Movie</string>
+
+    <!-- Form Labels -->
+    <string name="title_add_movie">Add New Movie</string>
+    <string name="title_edit_movie">Edit Movie</string>
+    <string name="title_movie_details">Movie Details</string>
+    <string name="label_title">Movie Title *</string>
+    <string name="label_genre">Genre *</string>
+    <string name="label_release_year">Release Year *</string>
+    <string name="label_rating">Rating (0.0 – 10.0) *</string>
+    <string name="label_status">Watchlist Status</string>
+    <string name="label_notes">Personal Notes</string>
+    <string name="hint_notes">Write your thoughts, favorite quotes, or review...</string>
+    <string name="btn_save_movie">Save Movie</string>
+    <string name="btn_save_changes">Save Changes</string>
+
+    <!-- Validation Errors -->
+    <string name="err_title_required">Please enter a movie title</string>
+    <string name="err_genre_required">Please enter a genre</string>
+    <string name="err_year_required">Please enter a release year</string>
+    <string name="err_year_invalid">Please enter a valid year (1888 - 2100)</string>
+    <string name="err_rating_required">Please enter a rating</string>
+    <string name="err_rating_invalid">Rating must be between 0.0 and 10.0</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_delete_title">Delete Movie?</string>
+    <string name="dialog_delete_message">Are you sure you want to delete this movie from your watchlist? This action cannot be undone.</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+
+    <!-- Toast messages -->
+    <string name="toast_movie_added">Movie added to watchlist</string>
+    <string name="toast_movie_updated">Movie details updated</string>
+    <string name="toast_movie_deleted">Movie deleted from watchlist</string>
+    <string name="toast_status_updated">Status updated</string>
+</resources>
